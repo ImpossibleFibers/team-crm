@@ -1,0 +1,28 @@
+{
+  "name": "team-crm",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "A team CRM nobody has to open: the team uses it through Claude.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/migrate.mjs",
+    "migrate": "node scripts/migrate.mjs",
+    "users": "node scripts/users.mjs",
+    "dev": "node scripts/dev.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@netlify/database": "^2.0.1",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.10",
+    "@electric-sql/pglite-socket": "^0.2.13"
+  }
+}
